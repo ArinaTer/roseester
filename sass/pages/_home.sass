@@ -1,0 +1,285 @@
+// Header
+.wrapper
+    background: url(../img/background-img.jpg) no-repeat
+    position: relative
+    background-size: cover
+    overflow: hidden
+    height: 100%
+
+.menu__blur
+    background: rgba(20, 20, 20, 0.2)
+    backdrop-filter: blur(13px)
+    max-width: 100%
+    max-height: 50%
+
+.menu__lvl1
+    position: relative
+    overflow: hidden
+    padding-top: 60px
+    padding-bottom: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: $w
+    +r(1600)
+        padding-top: 40px
+    +r(1280)
+        grid-gap: 10px
+        padding-top: 30px
+    +r(782)
+        justify-content: space-between
+
+.menu__text
+    font-size: 13px
+    flex-basis: 22%
+    max-width: 22%
+    line-height: 16px
+    +li
+    +r(1080)
+        font-size: 11px
+    +r(782)
+        display: none
+    br
+        +r(1320)
+            display: none
+
+.menu__logo
+    flex-basis: 10%
+    max-width: 10%
+    +r(1600)
+        flex-basis: 20%
+        max-width: 20%
+    +r(891)
+        display: flex
+        align-items: center
+        justify-content: center
+    +r(782)
+        order: 2
+
+.menu__address
+    display: flex
+    flex-basis: 22%
+    max-width: 22%
+    grid-gap: 20px
+    +r(1280)
+        grid-gap: 15px
+    +r(891)
+        flex-basis: 26%
+        max-width: 26%
+    +r(782)
+        display: none
+    .adress__text
+        font-size: 16px
+        line-height: 16px
+        +r(1280)
+            font-size: 14px
+        +r(1080)
+            font-size: 12px
+
+.menu__phone
+    display: flex
+    flex-basis: 25%
+    max-width: 25%
+    grid-gap: 10px
+    +r(1280)
+        grid-gap: 15px
+    +r(891)
+        flex-basis: 26%
+        max-width: 26%
+    +r(782)
+        display: none
+    .phone__text
+        font-size: 30px
+        line-height: 24px
+        color: $w
+        +r(1600)
+            font-size: 25px
+        +r(1280)
+            font-size: 18px
+        +r(1080)
+            font-size: 16px
+
+.menu__btn
+    border: 1px solid $yellow
+    flex-basis: 20%
+    max-width: 20%
+    padding: 20px 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    +r(782)
+        display: none
+    button
+        font-size: 20px
+        line-height: 24px
+        color: $yellow
+        +r(1280)
+            font-size: 18px
+        +r(1080)
+            font-size: 15px
+
+.burger
+    display: none
+    +r(782)
+        width: 42px
+        height: 34px
+        transition: .2s ease
+        position: relative
+        display: flex
+        align-items: flex-start
+        order: 1
+        z-index: 6666
+    span
+        width: 45px
+        height: 4px
+        border-radius: 20px
+        background: $w
+        transition: .3s ease
+        margin: 4px auto
+    +r(782)
+        display: grid
+        align-items: flex-start
+        justify-content: flex-start
+    .item
+        width: 30px
+
+.mobile__phone
+    display: none
+    +r(782)
+        display: block
+        order: 3
+
+.menu__lvl2
+    display: flex
+    grid-gap: 50px
+    align-items: center
+    padding-top: 25px
+    padding-bottom: 100px
+    +r(1080)
+        grid-gap: 30px
+    +r(782)
+        display: none
+    .menu__link
+        font-size: 20px
+        color: $w
+        +r(1280)
+            font-size: 18px
+        +r(1080)
+            font-size: 16px
+
+.header__headline
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +r(782)
+        flex-direction: column
+        align-items: baseline
+        justify-content: flex-end
+        padding-top: 65px
+
+.headline__title
+    font-size: 100px
+    line-height: 115%
+    +bold
+    color: $w
+    +r(1600)
+        font-size: 80px
+    +r(1280)
+        font-size: 60px
+    +r(1080)
+        font-size: 50px
+    +r(782)
+        font-size: 30px
+        padding-bottom: 30px
+
+.headline__subtitle
+    border-left: 5px solid $w
+    padding-left: 30px
+
+    li
+        color: $w
+        padding-bottom: 25px
+        font-size: 20px
+        line-height: 20px
+        +r(1280)
+            font-size: 18px
+        +r(1080)
+            font-size: 16px
+        +r(782)
+            padding-bottom: 10px
+            font-size: 12px
+        &:nth-last-of-type(1)
+            padding: 0
+
+.header__advantages
+    padding-top: 70px
+    padding-bottom: 85px
+    ul
+        display: flex
+        grid-gap: 100px
+        +r(1080)
+            grid-gap: 40px
+        +r(891)
+            grid-gap: 20px
+        +r(782)
+            flex-direction: column
+
+    li
+        display: flex
+        padding-left: 10px
+
+    p
+        color: $w
+        font-size: 20px
+        margin-left: -40px
+        line-height: 24px
+        display: flex
+        align-items: center
+        +r(1280)
+            font-size: 18px
+        +r(1080)
+            font-size: 16px
+        +r(891)
+            font-size: 14px
+        +r(782)
+            font-size: 18px
+        br
+            +r(782)
+                display: none
+
+.figure
+    border: 7px solid $w
+    padding: 30px
+    border-radius: 17px
+    display: inline-block
+    transform: rotate(45deg)
+    +r(1080)
+        padding: 25px
+    +r(782)
+        stroke: $w
+        padding: 30px
+        margin-bottom: 20px
+        border-color: $yellow
+
+.header__btn
+    background-color: $yellow
+    flex-basis: 30%
+    max-width: 30%
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: center
+    grid-gap: 30px
+    margin-bottom: 140px
+    +r(782)
+        flex-basis: 100%
+        max-width: 100%
+
+    button
+        color: $w
+        font-size: 20px
+        line-height: 24px
+        +r(1280)
+            font-size: 18px
+        +r(1080)
+            font-size: 16px
