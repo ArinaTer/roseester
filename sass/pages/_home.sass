@@ -15,11 +15,11 @@
 .menu__lvl1
     position: relative
     overflow: hidden
-    padding-top: 60px
-    padding-bottom: 40px
     display: flex
     align-items: center
     justify-content: space-between
+    padding-top: 50px
+    padding-bottom: 40px
     color: $w
     +r(1600)
         padding-top: 40px
@@ -31,12 +31,16 @@
 
 .menu__text
     font-size: 13px
-    flex-basis: 22%
-    max-width: 22%
+    flex-basis: 20%
+    max-width: 20%
     line-height: 16px
-    +light
+    +r(1280)
+        flex-basis: 30%
+        max-width: 30%
     +r(1080)
         font-size: 11px
+        flex-basis: 50%
+        max-width: 50%
     +r(782)
         display: none
     br
@@ -44,12 +48,12 @@
             display: none
 
 .menu__logo
-    flex-basis: 10%
-    max-width: 10%
     +r(1600)
         flex-basis: 20%
         max-width: 20%
     +r(891)
+        flex-basis: 30%
+        max-width: 30%
         display: flex
         align-items: center
         justify-content: center
@@ -58,19 +62,22 @@
 
 .menu__address
     display: flex
-    flex-basis: 22%
-    max-width: 22%
-    grid-gap: 20px
+    flex-basis: 14%
+    max-width: 14%
+    grid-gap: 15px
     +r(1280)
         grid-gap: 15px
+        flex-basis: 30%
+        max-width: 30%
     +r(891)
-        flex-basis: 26%
-        max-width: 26%
+        flex-basis: 50%
+        max-width: 50%
     +r(782)
         display: none
     .adress__text
         font-size: 16px
         line-height: 16px
+        font-weight: 400
         +r(1280)
             font-size: 14px
         +r(1080)
@@ -78,20 +85,23 @@
 
 .menu__phone
     display: flex
-    flex-basis: 25%
-    max-width: 25%
-    grid-gap: 10px
+    grid-gap: 17px
+    flex-basis: 15%
+    max-width: 15%
     +r(1280)
+        flex-basis: 30%
+        max-width: 30%
         grid-gap: 15px
     +r(891)
-        flex-basis: 26%
-        max-width: 26%
+        flex-basis: 40%
+        max-width: 40%
     +r(782)
         display: none
     .phone__text
         font-size: 30px
-        line-height: 24px
+        line-height: 30px
         color: $w
+        +bebreg
         +r(1600)
             font-size: 25px
         +r(1280)
@@ -101,22 +111,34 @@
 
 .menu__btn
     border: 1px solid $yellow
-    flex-basis: 20%
-    max-width: 20%
     padding: 20px 10px
     display: flex
+    width: 380px
+    height: 70px
     align-items: center
     justify-content: center
+    +r(1600)
+        width: 300px
+    +r(1280)
+        width: 260px
+    +r(1080)
+        width: 200px
     +r(782)
         display: none
+        &:hover
+            border: 1px solid $ff
+            color: $ff
     button
-        font-size: 20px
+        font-size: 19px
         line-height: 24px
         color: $yellow
+        font-weight: 800
         +r(1280)
             font-size: 18px
         +r(1080)
             font-size: 15px
+        &:hover
+            color: $ff
 
 .burger
     display: none
@@ -151,10 +173,10 @@
 
 .menu__lvl2
     display: flex
-    grid-gap: 50px
+    grid-gap: 56px
     align-items: center
-    padding-top: 25px
-    padding-bottom: 100px
+    padding-top: 15px
+    padding-bottom: 75px
     +r(1080)
         grid-gap: 30px
     +r(782)
@@ -162,10 +184,14 @@
     .menu__link
         font-size: 20px
         color: $w
+        font-weight: 500
+        +mulreg
         +r(1280)
             font-size: 18px
         +r(1080)
             font-size: 16px
+        &:hover
+            border-bottom: 1px solid $w
 
 .header__headline
     display: flex
@@ -178,10 +204,11 @@
         padding-top: 65px
 
 .headline__title
-    font-size: 100px
+    font-size: 104px
     line-height: 115%
-    +mureg
     color: $w
+    font-weight: 700
+    +bebreg
     +r(1600)
         font-size: 80px
     +r(1280)
@@ -199,8 +226,10 @@
     li
         color: $w
         padding-bottom: 25px
-        font-size: 20px
+        font-size: 26px
         line-height: 20px
+        font-weight: 500
+        +mulreg
         +r(1280)
             font-size: 18px
         +r(1080)
@@ -216,7 +245,7 @@
     padding-bottom: 85px
     ul
         display: flex
-        grid-gap: 100px
+        grid-gap: 52px
         +r(1080)
             grid-gap: 40px
         +r(891)
@@ -228,6 +257,11 @@
         display: flex
         padding-left: 10px
 
+        svg
+            display: none
+            +r(782)
+                display: block
+
     p
         color: $w
         font-size: 20px
@@ -235,6 +269,7 @@
         line-height: 24px
         display: flex
         align-items: center
+        +mulreg
         +r(1280)
             font-size: 18px
         +r(1080)
@@ -249,13 +284,14 @@
 
 .figure
     border: 7px solid $w
-    padding: 30px
+    padding: 28px
     border-radius: 17px
     display: inline-block
     transform: rotate(45deg)
     +r(1080)
         padding: 25px
     +r(782)
+        display: none
         stroke: $w
         padding: 30px
         margin-bottom: 20px
@@ -274,11 +310,15 @@
     +r(782)
         flex-basis: 100%
         max-width: 100%
+    &:hover
+        background-color: $ff
 
     button
         color: $w
         font-size: 20px
         line-height: 24px
+        font-weight: 700
+        +montreg
         +r(1280)
             font-size: 18px
         +r(1080)
